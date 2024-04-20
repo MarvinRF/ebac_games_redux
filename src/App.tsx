@@ -30,7 +30,7 @@ function App() {
       <GlobalStyle />
       <div className="container">
         <Header />
-        <Produtos jogos={games} />
+        <Produtos />
       </div>
     </Provider>
   )

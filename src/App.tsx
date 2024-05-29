@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Produtos from './containers/Produtos'
 
 import { GlobalStyle } from './styles'
-import { store } from './store'
+import { configuraStore } from './store'
 import { Provider } from 'react-redux'
 
 export type Game = {
@@ -15,6 +15,8 @@ export type Game = {
   categoria: string
   imagem: string
 }
+
+const store = configuraStore()
 
 function App() {
   const [games, setGames] = useState<Game[]>([])

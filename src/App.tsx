@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import Header from './components/Header'
-import Produtos from './containers/Produtos'
+import Produtos from './containers/Produtos/Produtos'
 
 import { GlobalStyle } from './styles'
 import { configuraStore } from './store'
 import { Provider } from 'react-redux'
+
+const store = configuraStore()
 
 export type Game = {
   id: number
@@ -15,8 +17,6 @@ export type Game = {
   categoria: string
   imagem: string
 }
-
-const store = configuraStore()
 
 function App() {
   const [games, setGames] = useState<Game[]>([])
